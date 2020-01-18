@@ -18,7 +18,7 @@ export type TInitialState = {
   editCustomer?: TEditCustomer;
 };
 
-const initialState = {};
+export const initialState = {};
 
 const fetchCustomersRequest = (state: TInitialState): TInitialState => ({
   ...state,

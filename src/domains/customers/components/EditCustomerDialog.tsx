@@ -18,6 +18,7 @@ import { getEditCustomerProps } from '../selectors';
 import { connect } from 'react-redux';
 import CircularLoader from '#/shared/components/CircularLoader';
 import { TEditCustomer } from '../reducers';
+import LANG from '#/shared/languages/en';
 
 const FIELDS = {
   BUDGET: 'budget'
@@ -149,10 +150,10 @@ const EditCustomerDialog: FunctionComponent<TProps> = ({
           color="primary"
           autoFocus={true}
         >
-          Save
+          {LANG.GENERAL.SAVE}
         </Button>
         <Button onClick={handleClose} color="secondary">
-          Cancel
+          {LANG.GENERAL.CANCEL}
         </Button>
       </DialogActions>
     </Dialog>

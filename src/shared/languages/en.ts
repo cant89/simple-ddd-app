@@ -1,7 +1,9 @@
 const GENERAL = {
   YES: 'Yes',
   NO: 'No',
-  LOADING: 'Loading'
+  LOADING: 'Loading',
+  SAVE: 'Save',
+  CANCEL: 'Cancel'
 };
 
 const ERROR_MESSAGE = {
