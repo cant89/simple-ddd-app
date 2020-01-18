@@ -33,7 +33,7 @@ export interface IUpdateCustomerFailed extends AnyAction {
   payload: TErrorResult;
 }
 export interface IUpdateCustomerSucceeded extends AnyAction {
-  payload: TCustomerData;
+  payload: TCustomerData[];
 }
 export interface IUpdateCustomerReset extends AnyAction {}
 

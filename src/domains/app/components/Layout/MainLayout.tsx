@@ -7,7 +7,7 @@ import Header from '../Header';
 const MainLayout: FunctionComponent<RouteComponentProps> = ({ children }) => (
   <Box m={0} p={0} maxWidth="xl">
     <Header />
-    <Container maxWidth="md">{children}</Container>
+    <Container maxWidth="sm">{children}</Container>
   </Box>
 );
 

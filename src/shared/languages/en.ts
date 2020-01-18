@@ -18,6 +18,7 @@ const DIALOG = {
 const CUSTOMER = {
   BUDGET: 'Budget',
   BUDGET_SPENT: 'Budget spent',
+  BUDGET_LEFT: 'Budget left',
   FIRST_PURCHASE: 'First purchase'
 };
 

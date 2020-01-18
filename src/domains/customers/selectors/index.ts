@@ -20,7 +20,8 @@ export const getCustomersListProps = createSelector(
       customers.map((customer: TCustomer) => ({
         ...customer,
         budget: customer.budget.toFixed(2),
-        budget_spent: customer.budget_spent.toFixed(2)
+        budget_spent: customer.budget_spent.toFixed(2),
+        budget_left: (customer.budget - customer.budget_spent).toFixed(2)
       }))
   })
 );

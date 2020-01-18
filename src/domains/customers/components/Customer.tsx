@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState, Fragment } from 'react';
-import { TCustomer } from '../services';
+import { TCustomerExtended } from './CustomersList';
 import {
   Typography,
   Card,
@@ -9,10 +9,9 @@ import {
 import { makeStyles } from '@material-ui/core/styles';
 import EditCustomerDialog from './EditCustomerDialog';
 import LANG from '#/shared/languages/en';
+import moment from 'moment';
 
-type TProps = {
-  customer: TCustomer;
-};
+type TProps = { customer: TCustomerExtended };
 
 const useStyles = makeStyles(({ spacing }) => ({
   card: {
@@ -21,7 +20,13 @@ const useStyles = makeStyles(({ spacing }) => ({
 }));
 
 const Customer: FunctionComponent<TProps> = ({ customer }) => {
-  const { name, budget, budget_spent, date_of_first_purchase } = customer;
+  const {
+    name,
+    budget,
+    budget_spent,
+    budget_left,
+    date_of_first_purchase
+  } = customer;
   const classes = useStyles();
   const [editDialogVisibility, changeEditDialogVisibility] = useState(false);
 
@@ -44,14 +49,17 @@ const Customer: FunctionComponent<TProps> = ({ customer }) => {
           <CardContent>
             <Typography variant="h4">{name}</Typography>
             <Typography>
-              <strong>{LANG.CUSTOMER.BUDGET}:</strong> {budget}
+              <strong>{LANG.CUSTOMER.BUDGET}:</strong> € {budget}
             </Typography>
             <Typography>
-              <strong>{LANG.CUSTOMER.BUDGET_SPENT}:</strong> {budget_spent}
+              <strong>{LANG.CUSTOMER.BUDGET_SPENT}:</strong> € {budget_spent}
+            </Typography>
+            <Typography>
+              <strong>{LANG.CUSTOMER.BUDGET_LEFT}:</strong> € {budget_left}
             </Typography>
             <Typography>
               <strong>{LANG.CUSTOMER.FIRST_PURCHASE}:</strong>{' '}
-              {date_of_first_purchase}
+              {moment(date_of_first_purchase).format('dddd, MMMM Do YYYY')}
             </Typography>
           </CardContent>
         </CardActionArea>

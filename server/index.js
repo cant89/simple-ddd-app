@@ -1,22 +1,9 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-let customers = [
-  {
-    id: 1,
-    name: 'Martian Firma',
-    budget: 100000.0,
-    budget_spent: 4500.0,
-    date_of_first_purchase: '2119-07-07'
-  },
-  {
-    id: 2,
-    name: 'Solar Firma',
-    budget: 1123.22,
-    budget_spent: 451.3754,
-    date_of_first_purchase: '2120-01-14'
-  }
-];
+const DB = require('./db');
+
+let { customers } = DB;
 
 app.use(function(req, res, next) {
   res.header('Access-Control-Allow-Origin', '*');
@@ -42,6 +29,7 @@ app.post('/api/customer/:id', async function(req, res) {
   customers = customers.map(cust =>
     cust.id === id ? { ...cust, ...newData } : cust
   );
+  // delay response only for showcasing the loading on FE
   await timeout(1000);
   res.send(customers);
 });
