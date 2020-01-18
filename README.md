@@ -1,6 +1,8 @@
 # Getting Started
 
-Billie to Mars Project
+Billie to Mars Project.
+
+This project include a front-end application and a very simple backend.
 
 ## Environment
 
@@ -30,12 +32,16 @@ load-nvmrc
 
 ## Install and run
 
-```shell
-# Install Node dependencies
-$ npm install
+### Front-end
 
-# Run the app
-$ npm run start
+```shell
+npm i && npm start
+```
+
+### Back-end
+
+```shell
+cd server && npm i && npm start
 ```
 
 ## Run Tests
