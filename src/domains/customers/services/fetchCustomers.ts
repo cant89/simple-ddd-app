@@ -21,7 +21,5 @@ export const fetchCustomers: TFetchCustomers = async () => {
     endpoint: ENDPOINT.GET_CUSTOMERS
   });
 
-  console.log(result);
-
   return new Result(result);
 };

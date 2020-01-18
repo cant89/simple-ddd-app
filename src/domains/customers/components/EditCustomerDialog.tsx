@@ -12,9 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ConfirmationDialog from '#/shared/components/ConfirmationDialog';
 import {
   updateCustomerRequest as updateCustomerRequestAction,
-  updateCustomerReset as updateCustomerResetAction,
-  IUpdateCustomerRequest,
-  IUpdateCustomerReset
+  updateCustomerReset as updateCustomerResetAction
 } from '../actions';
 import { getEditCustomerProps } from '../selectors';
 import { connect } from 'react-redux';

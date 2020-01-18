@@ -9,7 +9,6 @@ function* updateCustomerSaga({
   payload
 }: actions.IUpdateCustomerRequest): SagaIterator {
   const result = yield call(updateCustomer, payload);
-  console.log(result);
 
   if (result.isSuccess()) {
     yield put(actions.updateCustomerSucceeded(result.getSuccessData()));

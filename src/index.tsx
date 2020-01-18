@@ -5,7 +5,6 @@ import configureStore from './store';
 import sagas from './sagas';
 
 const history = createBrowserHistory();
-console.log('index');
 
 const main = new Main({ configureStore, history, reducers, sagas });
 

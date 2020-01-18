@@ -14,7 +14,6 @@ export type TCustomerData = {
 export type TUpdateCustomer = (data: TCustomerData) => Promise<Result>;
 
 export const updateCustomer: TUpdateCustomer = async data => {
-  console.log(data);
   const result = await request({
     action: REQUEST_ACTION.POST,
     axiosInstance: customersInstance,
