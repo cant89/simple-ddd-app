@@ -1,0 +1,19 @@
+image: node:10.15.3
+
+pipelines:
+  branches:
+    development:
+      - step:
+          caches:
+            - node
+          script:
+            - npm install
+            - npm run build:stage
+    master:
+      - step:
+          caches:
+            - node
+          script:
+            - npm ci --production
+            - git push origin $BITBUCKET_BRANCH
+            - npm run build:prod

@@ -1,0 +1,63 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-react", "tslint:recommended", "tslint-config-prettier"],
+  "jsRules": {},
+  "rules": {
+    "no-empty-interface": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "jsx-wrap-multiline": false,
+    "max-line-length": {
+      "options": [120]
+    },
+    "indent": [true, "spaces", 2],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-double",
+      "avoid-escape",
+      "avoid-template"
+    ],
+    "semicolon": [true, "always"],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
+    "space-before-function-paren": [
+      true,
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "member-access": false,
+    "new-parens": true,
+    "array-type": [true, "array"],
+    "import-spacing": false,
+    "interface-over-type-literal": false,
+    "class-name": true,
+    "arrow-return-shorthand": true,
+    "no-var-keyword": true,
+    "switch-default": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
+    "no-trailing-whitespace": true,
+    "newline-before-return": true,
+    "trailing-comma": false,
+    "eofline": true,
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "time", "timeEnd", "trace"]
+    },
+    "import-name": false,
+    "no-boolean-literal-compare": false,
+    "typedef": [true, "call-signature"]
+  },
+  "rulesDirectory": []
+}
