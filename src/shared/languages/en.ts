@@ -19,7 +19,8 @@ const CUSTOMER = {
   BUDGET: 'Budget',
   BUDGET_SPENT: 'Budget spent',
   BUDGET_LEFT: 'Budget left',
-  FIRST_PURCHASE: 'First purchase'
+  FIRST_PURCHASE: 'First purchase',
+  EDIT_BUDGET: '"Edit budget"'
 };
 
 const LANG = {
