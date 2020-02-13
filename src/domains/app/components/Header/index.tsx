@@ -19,13 +19,7 @@ const Header = () => {
 
   return (
     <AppBar className={classes.root}>
-      <Toolbar className={classes.toolbar}>
-        <img
-          width="35"
-          src="https://www.billie.io/images/logo/billie_logo_large.svg"
-          alt="billie on mars"
-        />
-      </Toolbar>
+      <Toolbar className={classes.toolbar} />
     </AppBar>
   );
 };

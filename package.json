@@ -1,5 +1,5 @@
 {
-  "name": "billie-to-mars",
+  "name": "stupid-app",
   "version": "0.0.1",
   "repository": {
     "type": "git",
@@ -145,6 +145,8 @@
     "globals": {
       "__TEST__": true
     },
-    "setupFilesAfterEnv": ["<rootDir>jest/config.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>jest/config.js"
+    ]
   }
 }
